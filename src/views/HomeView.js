@@ -7,27 +7,28 @@ class HomeView extends Component {
     super(propr);
 
     this.state = {
-      viesti: '',
+      exams: [],
     };
   }
   render() {
-    const viesti = this.state.viesti;
+    const exams = this.state.exams;
+    const examList = exams.map(exam => <li key={exam.date}>{exam.course}</li>);
     return (
       <MainComponent>
         <h1>Tenttiarkisto</h1>
-          <p>Bäkkäriviesti 😀: <b>{ viesti }</b></p>
+        <ul>{examList}</ul>
       </MainComponent>
     );
   }
 
   async componentDidMount() {
     try {
-      let data = await axios.get('/api/files');
-      console.log(data)
+      let data = await axios.get('tentit.json');
+      console.log(data);
       this.setState({
         ...this.state,
         ...{
-          viesti: data.data.message,
+          exams: data.data,
         },
       });
     } catch (e) {
