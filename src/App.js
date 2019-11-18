@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeView from './views/HomeView.js';
 import LoginView from './views/LoginView.js';
 import AddView from './views/AddView.js';
+import CourseView from './views/CourseView.js';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route path="/login" component={LoginView} />
           <Route path="/add" component={AddView} />
+            <Route path="/course/:id" component={CourseView} />
           <Route path="/" component={HomeView} />
         </Switch>
       </div>

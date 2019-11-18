@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import MainComponent from '../components/main/MainComponent.js';
 import axios from 'axios';
 
@@ -9,13 +10,12 @@ class HomeView extends Component {
     this.state = {
       subjects: [],
       courses: [],
-      exams: [],
     };
   }
   render() {
-    const { subjects, courses, exams } = this.state;
+    const { subjects, courses } = this.state;
     const courseList = courses.map(course => (
-      <li key={course.id}>{course.name}</li>
+      <li key={course.id}><Link to={`/course/${course.id}`}>{course.name}</Link></li>
     ));
     return (
       <MainComponent>
@@ -28,15 +28,13 @@ class HomeView extends Component {
 
   async componentDidMount() {
     try {
-      let subjects = await axios.get('subjects.json');
-      let courses = await axios.get('courses.json');
-      let exams = await axios.get('exams.json');
+      let subjects = await axios.get('exampleData/subjects.json');
+      let courses = await axios.get('exampleData/courses.json');
       this.setState({
         ...this.state,
         ...{
           subjects: subjects.data,
           courses: courses.data,
-          exams: exams.data,
         },
       });
     } catch (e) {
