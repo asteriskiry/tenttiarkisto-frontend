@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import Header from '../header/HeaderComponent.js';
+import Footer from '../footer/FooterComponent.js';
 
 class MainComponent extends Component {
   render() {
@@ -8,6 +9,7 @@ class MainComponent extends Component {
       <div>
         <Header />
         <Container>{this.props.children}</Container>
+        <Footer />
       </div>
     );
   }

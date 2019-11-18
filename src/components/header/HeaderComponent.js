@@ -11,6 +11,7 @@ class HeaderComponent extends Component {
           <Nav className="ml-auto">
             <Nav.Link href="/">Koti</Nav.Link>
             <Nav.Link href="/login">Kirjaudu sisään</Nav.Link>
+            <Nav.Link href="/add">Lisää tentti</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
