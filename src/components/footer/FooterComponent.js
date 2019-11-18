@@ -5,7 +5,7 @@ class FooterComponent extends Component {
   render() {
     return (
       <Alert variant='danger'>
-        Hellou :)
+        Tähän joku järkevä footeri <span role="img">😁</span>
       </Alert>
     );
   }

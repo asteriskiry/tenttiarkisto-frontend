@@ -1,0 +1,37 @@
+[
+    {
+        "id": "0001",
+        "subjectId": "222",
+        "name": "Matematiikan peruskurssi 1"
+    },
+    {
+        "id": "0002",
+        "subjectId": "111",
+        "name": "Tietorakenteet ja algoritmit"
+    },
+    {
+        "id": "0003",
+        "subjectId": "333",
+        "name": "Kehityspsykologian perusteet"
+    },
+    {
+        "id": "0004",
+        "subjectId": "555",
+        "name": "Ohjelmistotuotannon peruskurssi"
+    },
+    {
+        "id": "0005",
+        "subjectId": "222",
+        "name": "Kalastuksen perusteet"
+    },
+    {
+        "id": "0006",
+        "subjectId": "222",
+        "name": "Kapellimestariksi 15 minuutissa"
+    },
+    {
+        "id": "0007",
+        "subjectId": "111",
+        "name": "Algoritmien ja ohjelmoinnoin peruskurssi"
+    }
+]

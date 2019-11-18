@@ -1,0 +1,22 @@
+[
+    {
+        "id": "111",
+        "name": "Tietojenkäsittelytieteet"
+    },
+    {
+        "id": "555",
+        "name": "Tietotekniikka"
+    },
+    {
+        "id": "222",
+        "name": "Matematiikka"
+    },
+    {
+        "id": "333",
+        "name": "Psykologia"
+    },
+    {
+        "id": "444",
+        "name": "Muu"
+    }
+]
