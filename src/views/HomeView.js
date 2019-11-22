@@ -28,8 +28,8 @@ class HomeView extends Component {
 
   async componentDidMount() {
     try {
-      let subjects = await axios.get('exampleData/subjects.json');
-      let courses = await axios.get('exampleData/courses.json');
+      let subjects = await axios.get('/api/subjects');
+      let courses = await axios.get('/api/courses');
       this.setState({
         ...this.state,
         ...{
