@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import Header from '../header/HeaderComponent.js';
-import Footer from '../footer/FooterComponent.js';
+import Header from '../header/HeaderComponent';
+import Footer from '../footer/FooterComponent';
+import CourseTable from '../main/CourseTable'
 
 class MainComponent extends Component {
   render() {
     return (
       <div>
         <Header />
-        <Container>{this.props.children}</Container>
+        <CourseTable data={this.props.children} />
         <Footer />
       </div>
     );

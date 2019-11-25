@@ -14,14 +14,10 @@ class HomeView extends Component {
   }
   render() {
     const { subjects, courses } = this.state;
-    const courseList = courses.map(course => (
-      <li key={course.id}><Link to={`/course/${course.id}`}>{course.name}</Link></li>
-    ));
+    const courseList = courses.map(course => { return {id: course.id, name: course.name, subject: course.subjectId, numOfExams: 0}});
     return (
       <MainComponent>
-        <h1>Tenttiarkisto</h1>
-        <h2>Kurssit</h2>
-        <ul>{courseList}</ul>
+        {courseList}
       </MainComponent>
     );
   }
